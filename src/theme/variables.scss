@@ -1,6 +1,25 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+:root {
+  --ion-color-new: #f368e0;
+  --ion-color-new-rgb: 243,104,224;
+  --ion-color-new-contrast: #FFF;
+  --ion-color-new-contrast-rgb: 0,0,0;
+  --ion-color-new-shade: #d65cc5;
+  --ion-color-new-tint: #f477e3;
+}
+
+.ion-color-new {
+  --ion-color-base: var(--ion-color-new);
+  --ion-color-base-rgb: var(--ion-color-new-rgb);
+  --ion-color-contrast: var(--ion-color-new-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-new-contrast-rgb);
+  --ion-color-shade: var(--ion-color-new-shade);
+  --ion-color-tint: var(--ion-color-new-tint);
+}
+
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
@@ -76,13 +95,13 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+// @media (prefers-color-scheme: dark) {
   /*
    * Dark Colors
    * -------------------------------------------
    */
 
-  body {
+  body.dark {
     --ion-color-primary: #428cff;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;
@@ -152,7 +171,7 @@
    * -------------------------------------------
    */
 
-  .ios body {
+  .ios body.dark {
     --ion-background-color: #000000;
     --ion-background-color-rgb: 0,0,0;
 
@@ -192,7 +211,7 @@
    * -------------------------------------------
    */
 
-  .md body {
+  .md body.dark {
     --ion-background-color: #121212;
     --ion-background-color-rgb: 18,18,18;
 
@@ -229,4 +248,4 @@
 
     --ion-card-background: #1e1e1e;
   }
-}
+// }

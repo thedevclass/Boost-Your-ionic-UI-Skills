@@ -9,4 +9,9 @@ export class HomePage {
 
   constructor() {}
 
+  changed(e) {
+    console.log(e.detail.checked);
+    document.body.classList.toggle('dark', e.detail.checked);
+  }
+
 }
