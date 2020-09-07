@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonContent } from "@ionic/angular";
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,32 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  @ViewChild(IonContent) content: IonContent;
+  class = '';
+
+  ScrollStart() {
+    // console.log('Scroll Started');
+  }
+
+  ScrollEnd() {
+    // console.log('Scroll Ended');
+  }
+
+  Scroll(e) {
+    // console.log(e.detail);
+    if (e.detail.scrollTop > 100) {
+      this.class = 'shrink';
+    } else {
+      this.class = '';
+    }
+  }
+
+  top() {
+    this.content.scrollToTop(4000);
+  }
+
+  down() {
+    this.content.scrollToBottom(1000);
+  }
 
 }

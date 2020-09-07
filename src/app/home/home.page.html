@@ -1,20 +1,62 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar [class]="class">
     <ion-title>
-      Blank
+      Content Scroll
     </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="down()">
+        <ion-icon name="arrow-down"></ion-icon>
+      </ion-button>
+      <ion-button (click)="top()">
+        <ion-icon name="arrow-up"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [scrollEvents]="true"
+(ionScrollStart)="ScrollStart()"
+(ionScrollEnd)="ScrollEnd()"
+(ionScroll)="Scroll($event)"
+>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="ion-padding">
+
+    <ion-card mode="ios">
+      <img src="https://ionicframework.com/docs/demos/api/card/madison.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>Destination</ion-card-subtitle>
+        <ion-card-title>First Card</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Some Text Here.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card mode="ios">
+      <img src="https://ionicframework.com/docs/demos/api/card/madison.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>Destination</ion-card-subtitle>
+        <ion-card-title>Second Card</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Some Text Here.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card mode="ios">
+      <img src="https://ionicframework.com/docs/demos/api/card/madison.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>Destination</ion-card-subtitle>
+        <ion-card-title>Third Card</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Some Text Here.
+      </ion-card-content>
+    </ion-card>
+
   </div>
+
 </ion-content>
